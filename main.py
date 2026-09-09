@@ -1,16 +1,9 @@
-# This is a sample Python script.
+import data_extract
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# CSI 300 Index, CSI A500 Index, STAR Composite Index, CSI Dividend Index
+csi_300_data, csi_a500_data, star_data, csi_dividend_data = data_extract.get_data()
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(csi_300_data.shape)
+print(csi_a500_data.shape)
+print(star_data.shape)
+print(csi_dividend_data.shape)
