@@ -10,10 +10,10 @@ def cal_ma(date_length, data):
     left_index = 0
     for i in range(max_length):
         if count < date_length:
-            average = count / (count + 1) * average + data[i, 3] / (count + 1)
+            average = count / (count + 1) * average + data[i] / (count + 1)
             count += 1
         else:
-            average = average - data[left_index][3] / count + data[i, 3] / count
+            average = average - data[left_index] / count + data[i] / count
             left_index += 1
         ma_data[i] = average
     return ma_data
